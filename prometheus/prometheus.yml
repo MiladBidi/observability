@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - 'alertmanager:9093' # Replace with Alertmanager container address (use "localhost:9093" if on the same host)
+
+rule_files:
+  - /etc/prometheus/rules/*.yml
+
+scrape_configs:
+
+  # Scrape configuration for node_exporter
+  - job_name: node_exporter
+    static_configs:
+      - targets:
+          - '<target-ip>:9100'
