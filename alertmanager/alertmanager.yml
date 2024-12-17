@@ -8,7 +8,7 @@ global:
 receivers:
   - name: email-alerts
     email_configs:
-      - to: 'milaadbidi@gmail.com'
+      - to: '<receiver>@gmail.com'
 
 route:
   group_by: ['test-alert']
