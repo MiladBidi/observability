@@ -1,8 +1,8 @@
 global:
   smtp_smarthost: 'smtp.gmail.com:587'
-  smtp_from: 'firouzehdigital2024@gmail.com'
-  smtp_auth_username: 'firouzehdigital2024@gmail.com'
-  smtp_auth_password: 'krtsdjxghzhaxfvw'
+  smtp_from: '<sender>@gmail.com'
+  smtp_auth_username: 'username'
+  smtp_auth_password: 'password'
   smtp_require_tls: true
 
 receivers:
