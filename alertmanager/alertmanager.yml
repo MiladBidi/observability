@@ -1,0 +1,15 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: 'firouzehdigital2024@gmail.com'
+  smtp_auth_username: 'firouzehdigital2024@gmail.com'
+  smtp_auth_password: 'krtsdjxghzhaxfvw'
+  smtp_require_tls: true
+
+receivers:
+  - name: email-alerts
+    email_configs:
+      - to: 'milaadbidi@gmail.com'
+
+route:
+  group_by: ['test-alert']
+  receiver: email-alerts

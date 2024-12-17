@@ -1,0 +1,12 @@
+groups:
+  - name: test-alert
+    rules:
+      - alert: DiskSpaceLow
+        expr: rate(node_cpu_seconds_total{mode="idle"}[2m]) < 0.2
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High CPU Usage on {{ $labels.instance }}"
+          description: "CPU usage is very high (less than 20% idle) on {{ $labels.instance }}."
+
