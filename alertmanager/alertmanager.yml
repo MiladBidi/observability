@@ -11,5 +11,5 @@ receivers:
       - to: '<receiver>@gmail.com'
 
 route:
-  group_by: ['test-alert']
+  group_by: ['cpu-alert']
   receiver: email-alerts
