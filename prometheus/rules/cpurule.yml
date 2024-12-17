@@ -1,7 +1,7 @@
 groups:
-  - name: test-alert
+  - name: cpu-alert
     rules:
-      - alert: DiskSpaceLow
+      - alert: CPU-High-Usage
         expr: rate(node_cpu_seconds_total{mode="idle"}[2m]) < 0.2
         for: 1m
         labels:
